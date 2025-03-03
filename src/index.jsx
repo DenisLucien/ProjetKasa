@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Error from "./pages/Error";
+import About from'./pages/About';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Error" element={<Error />} />
+        <Route path="/About" element={<About />} />
       </Routes>
       <Footer/>
     </Router>

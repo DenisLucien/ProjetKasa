@@ -1,6 +1,6 @@
 import Banner from './banner'
 import Gallery from './gallery'
-import "./home.scss";
+// import "./home.scss";
 
 
 function Home() {

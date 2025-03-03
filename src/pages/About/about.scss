@@ -1,0 +1,46 @@
+.dropMenu {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  .dropMenuElement {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+
+.dropMenu {
+  // Styles pour le menu global
+}
+
+.dropMenuElement {
+  // Styles pour chaque élément du menu
+}
+
+.elementTitle {
+  cursor: pointer;
+  height:52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.elementText {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+
+  &.open {
+    max-height: 500px; // Ajuster selon la taille maximale attendue du texte
+  }
+
+  &.closed {
+    max-height: 0;
+  }
+}
