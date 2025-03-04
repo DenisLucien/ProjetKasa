@@ -25,7 +25,7 @@ function Gallery(){
           {data.map((item, index) => (
             <a href="#" key={index} className="Card">
               <h3>{item.title}</h3>
-              <img src={item.pictures[0]} alt=""></img>
+              <img src={item.cover} alt=""></img>
             </a>
           ))}
         </div>

@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Error from "./pages/Error";
-import About from'./pages/About';
+import About from "./pages/About";
 
 function App() {
   return (
@@ -12,13 +12,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Error" element={<Error />} />
+        <Route path="*" element={<Error />} />
         <Route path="/About" element={<About />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
-  
 }
 
 const container = document.getElementById("root");

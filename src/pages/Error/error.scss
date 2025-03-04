@@ -1,0 +1,35 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height:70vh;
+  h2 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 288px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #ff6060;
+  }
+  p {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 51.34px;
+    letter-spacing: 0%;
+    color: #ff6060;
+  }
+  a{
+    color:black;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    // text-decoration-offset: Auto;
+    text-decoration-thickness: Auto;
+  }
+}
