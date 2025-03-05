@@ -1,0 +1,40 @@
+.caroussel {
+  position: relative;
+  .carousselImg {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top: 50px;
+  }
+  .left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    filter: invert(1) brightness(2) contrast(2);
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    filter: invert(1) brightness(2) contrast(2);
+    padding: 10px;
+    cursor: pointer;
+  }
+  .carousselNumber {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    color: white;
+    transform: translate(50%);
+    font-weight: 800;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    border-radius: 0 0 0 10px;
+  }
+}

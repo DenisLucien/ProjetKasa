@@ -1,0 +1,109 @@
+.underPicture {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+  
+    .firstLine {
+      align-self: center;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      p {
+        padding: 0 20px;
+      }
+    }
+    p {
+      color: black;
+    }
+    .locationRef {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 51.34px;
+        letter-spacing: 0%;
+        color: #ff6060;
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25.67px;
+        letter-spacing: 0%;
+        margin: 0;
+        padding: 0;
+        align-self: start;
+      }
+    }
+    .host {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .hostpicture {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .hostname {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25.67px;
+        letter-spacing: 0%;
+        text-align: right;
+        color: #ff6060;
+        margin: 0;
+        padding: 0;
+        padding-right: 20px;
+      }
+    }
+    .secondLine {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .tags {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap:20px;
+        .tag {
+          color: white;
+          background-color: #ff6060;
+          padding: 5px 20px;
+          border-radius: 20px;
+          p {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19.96px;
+            letter-spacing: 0%;
+            text-align: center;
+          }
+        }
+      }
+      .rating {
+          display: flex;
+          gap: 5px;
+          i{
+              font-size: 24px;
+          }
+        .saumon {
+          color: #ff6060;
+        }
+        .grise {
+          color: #c4c4c4;
+        }
+      }
+    }
+  }
+  

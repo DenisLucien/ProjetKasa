@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   gap:30px;
-  .dropMenuElement {
+  .CollapseElement {
     width:100%;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
   // Styles pour le menu global
 }
 
-.dropMenuElement {
+.CollapseElement {
   // Styles pour chaque élément du menu
 }
 

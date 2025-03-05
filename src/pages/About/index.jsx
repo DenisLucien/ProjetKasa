@@ -1,10 +1,10 @@
 import Banner from './Banner'
-import DropMenu from './DropMenu'
+import Collapse from './Collapse'
 import './about.scss'
 function About(){
     return <div>
         <Banner/>
-        <DropMenu/>
+        <Collapse/>
     </div>
 }
 export default About
