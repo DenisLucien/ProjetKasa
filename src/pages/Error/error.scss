@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height:70vh;
+  min-height: 70vh;
   h2 {
     font-family: Montserrat;
     font-weight: 700;
@@ -20,8 +20,8 @@
     letter-spacing: 0%;
     color: #ff6060;
   }
-  a{
-    color:black;
+  a {
+    color: black;
     font-family: Montserrat;
     font-weight: 500;
     font-size: 18px;
@@ -31,5 +31,41 @@
     text-decoration-style: solid;
     // text-decoration-offset: Auto;
     text-decoration-thickness: Auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .error {
+    min-height: 50vh;
+    h2 {
+      font-family: Montserrat;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 143%;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+    }
+    p {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 143%;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: bottom;
+    }
+    a {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: 0%;
+      vertical-align: bottom;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-offset: 0%;
+      text-decoration-thickness: 0%;
+    }
   }
 }

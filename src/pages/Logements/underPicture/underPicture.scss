@@ -1,48 +1,80 @@
+.allUnderPicture {
+  display: flex;
+  flex-direction: column;
+}
 .underPicture {
-    margin-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .firstLine {
+    align-self: center;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-  
-  
-    .firstLine {
-      align-self: center;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  
-      p {
-        padding: 0 20px;
-      }
+    justify-content: space-between;
+
+    p {
+      padding: 0 20px;
+    }
+  }
+  p {
+    color: black;
+  }
+  .locationRef {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 51.34px;
+      letter-spacing: 0%;
+      color: #ff6060;
+      margin: 0;
+      padding: 0;
+      align-self: start;
     }
     p {
-      color: black;
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25.67px;
+      letter-spacing: 0%;
+      margin: 0;
+      padding: 0;
+      align-self: start;
     }
-    .locationRef {
-      display: flex;
-      flex-direction: column;
-      h1 {
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 51.34px;
-        letter-spacing: 0%;
-        color: #ff6060;
-        margin: 0;
-        padding: 0;
-      }
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+    .tag {
+      color: white;
+      background-color: #ff6060;
+      padding: 5px 20px;
+      border-radius: 20px;
       p {
         font-family: Montserrat;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 25.67px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19.96px;
         letter-spacing: 0%;
-        margin: 0;
-        padding: 0;
-        align-self: start;
+        text-align: center;
       }
     }
+  }
+
+  .secondLine {
+    padding-bottom:20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
     .host {
       display: flex;
       flex-direction: row;
@@ -66,44 +98,59 @@
         padding-right: 20px;
       }
     }
-    .secondLine {
+    .rating {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      .tags {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        gap:20px;
-        .tag {
-          color: white;
-          background-color: #ff6060;
-          padding: 5px 20px;
-          border-radius: 20px;
-          p {
-            font-family: Montserrat;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 19.96px;
-            letter-spacing: 0%;
-            text-align: center;
-          }
-        }
+      gap: 5px;
+      i {
+        font-size: 24px;
       }
-      .rating {
-          display: flex;
-          gap: 5px;
-          i{
-              font-size: 24px;
-          }
-        .saumon {
-          color: #ff6060;
-        }
-        .grise {
-          color: #c4c4c4;
-        }
+      .saumon {
+        color: #ff6060;
+      }
+      .grise {
+        color: #c4c4c4;
       }
     }
   }
-  
+}
+
+@media (max-width: 720px) {
+  .underPicture {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .firstLine {
+      align-self: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        padding: 0 20px;
+      }
+    }
+    p {
+      color: black;
+    }
+    .locationRef {
+      h1 {
+      }
+      p {
+      }
+    }
+    .tags {
+      .tag {
+        p {
+        }
+      }
+    }
+    .secondLine {
+      width: 100%;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+}

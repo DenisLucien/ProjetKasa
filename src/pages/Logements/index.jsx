@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import left from "../../assets/arrowLeft.png";
 import right from "../../assets/arrowRight.png";
 import "./logement.scss";
@@ -7,21 +7,25 @@ import UnderPicture from "./underPicture";
 import Error from "../Error";
 
 function Logement() {
-  const { id } = useParams();
-  // const { id } = parseInt(baseId);
-  console.log("id:", id);
-  
+  let { id } = useParams();
+  let [logement, setLogement] = useState(null);
+  console.log("idavant:", id);
   const [data, setData] = useState(null);
   let [indexCrsl, setIndexCrsl] = useState(0);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     console.log("useEffect");
+    if (!id) {
+      navigate("/error");
+    }
+
     fetch("/logements.json")
       .then((response) => response.json())
       .then((jsonData) => {
         setData(jsonData);
-        // console.log("le JSON ici:");
-        // console.log(jsonData);
+        setLogement(jsonData.find((element) => element.id === id));
+        console.log("le logement");
+        console.log(logement);
       })
 
       .catch((error) => {
@@ -32,25 +36,18 @@ function Logement() {
       });
   }, []);
 
-  
-
-  if (data) {
-    if (id >= data.length || id < 0) {
-      console.log("trop loin");
-      return <Error />;
-    }
-    else{
-      const photos = data[id].pictures;
+  if (logement) {
+    const photos = logement.pictures;
     function leftClicked() {
       if (indexCrsl > 0) {
         setIndexCrsl(indexCrsl - 1);
       } else {
-        setIndexCrsl(data[id].pictures.length - 1);
+        setIndexCrsl(logement.pictures.length - 1);
       }
     }
 
     function rightClicked() {
-      if (indexCrsl < data[id].pictures.length - 1) {
+      if (indexCrsl < logement.pictures.length - 1) {
         setIndexCrsl(indexCrsl + 1);
       } else {
         setIndexCrsl(0);
@@ -76,13 +73,12 @@ function Logement() {
             {indexCrsl + 1}/{photos.length}
           </p>
         </div>
-        <UnderPicture data={data} id={id} />
+        <UnderPicture logement={logement} />
       </div>
     );
-    }
-    
   } else {
-    return <div>Chargement...</div>;
+    navigate("/error");
+    return <Error />;
   }
 }
 

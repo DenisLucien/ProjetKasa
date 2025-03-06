@@ -3,7 +3,7 @@ import "./banner.scss";
 function Banner() {
   if (banner) {
     return (
-      <div className="banner">
+      <div className="bannerhome">
         <img src={banner} alt="Banner" />
         <p>Chez vous, partout et ailleurs</p>
       </div>

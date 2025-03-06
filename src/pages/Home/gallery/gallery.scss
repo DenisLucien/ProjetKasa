@@ -45,7 +45,11 @@
     z-index: 3;
   }
 }
-
+.loading{
+  align-self: center;
+  font-size: 48px;
+  color:black;
+}
 .CardGallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -53,14 +57,12 @@
   padding: 0 40px;
 }
 
-@media (max-width: 900px) {
-  .CardGallery {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 @media (max-width: 720px) {
   .CardGallery {
     grid-template-columns: 1fr;
+    margin:0;padding:0;
+    gap:20px;
   }
+
 }

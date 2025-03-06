@@ -23,14 +23,14 @@ function Gallery(){
         {data ? (
         <div className="CardGallery">
           {data.map((item, index) => (
-            <a href= {`/logement/${index}`} key={index} className="Card">
+            <a href= {`/logement/${item.id}`} key={index} className="Card">
               <h3>{item.title}</h3>
               <img src={item.cover} alt=""></img>
             </a>
           ))}
         </div>
       ) : (
-        <p>Chargement...</p>
+        <p className="loading">Chargement...</p>
       )}
     </div>
     

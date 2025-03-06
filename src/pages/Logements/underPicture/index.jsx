@@ -2,53 +2,57 @@
 import "./underPicture.scss";
 import CollapseUnderPicture from "./CollapseUnderPicture";
 
-function UnderPicture({ data, id }) {
-  if (!data || !data[id]) {
-    return <div>Chargement...</div>;
-  }
-  const rating = data[id].rating;
-  const tags = data[id].tags;
-
-  if (data) {
+function UnderPicture(objetlogement) {
+  // if (logement) {
+  //   return <div>Chargement...</div>;
+  // }
+  const logement = objetlogement.logement;
+  const rating = logement.rating;
+  const tags = logement.tags;
+  console.log("logement2");
+  console.log(objetlogement.logement);
+  if (logement) {
     return (
-      <div className="underPicture">
-        <div className="firstLine">
-          <div className="locationRef">
-            <h1>{data[id].title}</h1>
-            <p>{data[id].location}</p>
+      <div className="allUnderPicture">
+        <div className="underPicture">
+          <div className="firstLine">
+            <div className="locationRef">
+              <h1>{logement.title}</h1>
+              <p>{logement.location}</p>
+            </div>
+            <div className="tags">
+              {tags.map((tag) => (
+                <p key={tag} className="tag">
+                  {tag}
+                </p>
+              ))}
+            </div>
           </div>
+          <div className="secondLine">
+            <div className="host">
+              <p className="hostname">{logement.host.name}</p>
+              <img
+                className="hostpicture"
+                src={logement.host.picture}
+                alt="host"
+              ></img>
+            </div>
 
-          <div className="host">
-            <p className="hostname">{data[id].host.name}</p>
-            <img
-              className="hostpicture"
-              src={data[id].host.picture}
-              alt="host"
-            ></img>
+            <div className="rating">
+              {[...Array(5)].map((_, index) => (
+                <i
+                  key={index}
+                  className={
+                    index < rating
+                      ? "fa-solid fa-star saumon"
+                      : "fa-solid fa-star grise"
+                  }
+                ></i>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="secondLine">
-          <div className="tags">
-            {tags.map((tag) => (
-              <p key={tag} className="tag">
-                {tag}
-              </p>
-            ))}
-          </div>
-          <div className="rating">
-            {[...Array(5)].map((_, index) => (
-              <i
-                key={index}
-                className={
-                  index < rating
-                    ? "fa-solid fa-star saumon"
-                    : "fa-solid fa-star grise"
-                }
-              ></i>
-            ))}
-          </div>
-        </div>
-        <CollapseUnderPicture data={data} id={id} />
+        <CollapseUnderPicture logement={logement} />
       </div>
     );
   } else {

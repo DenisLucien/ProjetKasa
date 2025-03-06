@@ -3,7 +3,8 @@ import "./CollapseUnderPicture.scss";
 import arrowUp from "../../../../assets/arrowUp.png";
 import { useState } from "react";
 
-function CollapseUnderPicture({ data, id }) {
+function CollapseUnderPicture(objetlogement) {
+  const logement = objetlogement.logement;
   const [openSections, setOpenSections] = useState({
     description: false,
     equipements: false,
@@ -18,13 +19,13 @@ function CollapseUnderPicture({ data, id }) {
     <div className="collapseUnderPicture">
       <CollapseElement
         title="Description"
-        description={data[id].description}
+        description={logement.description}
         isOpen={openSections.description}
         toggleSection={() => toggleSection("description")}
       />
       <CollapseElement
         title="Equipements"
-        description={data[id].equipments}
+        description={logement.equipments}
         isOpen={openSections.equipements}
         toggleSection={() => toggleSection("equipements")}
       />
