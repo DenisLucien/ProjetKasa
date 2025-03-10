@@ -46,7 +46,7 @@ function CollapseElement({ title, description, isOpen, toggleSection }) {
             <h2>{title}</h2>
             <img src={arrowUp} alt="" className={isOpen ? "rotate" : ""} />
           </div>
-          <div className="elementDescription">{isOpen && <div>{description}</div    >}</div>
+          <div className={`elementDescription ${isOpen ? "open":"closed"}`}> <p>{description}</p></div>
         </div>
       );
   }
@@ -57,7 +57,7 @@ function CollapseElement({ title, description, isOpen, toggleSection }) {
             <h2>{title}</h2>
             <img src={arrowUp} alt="" className={isOpen ? "rotate" : ""} />
           </div>
-          <div className="elementDescription">{isOpen && <p>{description}</p>}</div>
+          <div className={`elementDescription ${isOpen ? "open":"closed"}`}> <p>{description}</p></div>
         </div>
       );
 
