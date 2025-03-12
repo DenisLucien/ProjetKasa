@@ -34,7 +34,8 @@
       color: #ff6060;
       margin: 0;
       padding: 0;
-      align-self: start;
+      text-align: start;
+      padding-bottom: 5px;
     }
     p {
       font-family: Montserrat;
@@ -53,10 +54,12 @@
     justify-content: start;
     gap: 20px;
     .tag {
+      display:flex;
       color: white;
       background-color: #ff6060;
       padding: 5px 20px;
       border-radius: 20px;
+      align-items: center;
       p {
         font-family: Montserrat;
         font-weight: 700;

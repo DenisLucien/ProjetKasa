@@ -77,7 +77,7 @@ function Logement() {
       </div>
     );
   } else {
-    navigate("/error");
+    // navigate("/error");
     return <Error />;
   }
 }

@@ -12,3 +12,13 @@
       box-shadow: 0px 4px 4px 0px #00000040;
     }
   }
+
+  @media (max-width: 768px) {
+    .banner {
+      height: 150px;
+      margin: 30px 0;
+      img {
+        height: 150px;
+      }
+    }
+  }

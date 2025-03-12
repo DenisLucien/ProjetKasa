@@ -31,7 +31,15 @@
       }
       width: 90%;
       padding: 5px;
-      transition: max-height 0.5s ease-out, padding 0.5s ease-out; // Ajout de la transition
+      transition: max-height 0.5s ease-in-out; // Ajout de la transition
+      max-height: 0;
+      overflow: hidden;
+      &.open {
+        max-height: 600px;
+      }
+      &.closed {
+        max-height: 0px;
+      }
     }
   }
 }
@@ -42,15 +50,6 @@
     .CollapseElement {
       width: 100%;
       .elementDescription {
-        transition: max-height 0.5s ease-in-out; // Ajout de la transition
-        max-height: 0;
-        overflow: hidden;
-        &.open {
-          max-height: 600px;
-        }
-        &.closed {
-          max-height: 0px;
-        }
       }
     }
   }
