@@ -38,3 +38,19 @@
     border-radius: 0 0 0 10px;
   }
 }
+
+@media (max-width: 720px) {
+  .logement{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .caroussel {
+      .carousselImg {
+        width: 90vw;
+        height: 70vw;
+      }
+    }
+  }
+  
+}

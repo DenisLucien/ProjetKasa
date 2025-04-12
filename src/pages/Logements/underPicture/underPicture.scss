@@ -54,7 +54,7 @@
     justify-content: start;
     gap: 20px;
     .tag {
-      display:flex;
+      display: flex;
       color: white;
       background-color: #ff6060;
       padding: 5px 20px;
@@ -72,7 +72,7 @@
   }
 
   .secondLine {
-    padding-bottom:20px;
+    padding-bottom: 20px;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -130,8 +130,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .locationRef p{
-        padding:0;
+      .locationRef p {
+        padding: 0;
       }
       p {
         padding: 0 20px;
@@ -142,20 +142,56 @@
     }
     .locationRef {
       h1 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 143%;
+        letter-spacing: 0%;
+        vertical-align: bottom;
       }
       p {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 143%;
+        letter-spacing: 0%;
+        vertical-align: bottom;
       }
     }
     .tags {
       .tag {
-        p {
-        }
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 143%;
+        letter-spacing: 0%;
+        text-align: center;
       }
     }
     .secondLine {
       width: 100%;
       flex-direction: row-reverse;
       align-items: center;
+      .rating {
+        i {
+          font-size: 18px;
+        }
+      }
+      .host {
+        .hostname {
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 143%;
+          letter-spacing: 0%;
+          text-align: right;
+          vertical-align: bottom;
+        }
+        .hostpicture {
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
   }
 }

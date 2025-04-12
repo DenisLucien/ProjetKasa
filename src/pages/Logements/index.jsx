@@ -6,15 +6,14 @@ import "./logement.scss";
 import UnderPicture from "./underPicture";
 import Error from "../Error";
 
+
 function Logement() {
   let { id } = useParams();
   let [logement, setLogement] = useState(null);
-  console.log("idavant:", id);
   const [data, setData] = useState(null);
   let [indexCrsl, setIndexCrsl] = useState(0);
   const navigate = useNavigate();
   useEffect(() => {
-    console.log("useEffect");
     if (!id) {
       navigate("/error");
     }
@@ -24,8 +23,6 @@ function Logement() {
       .then((jsonData) => {
         setData(jsonData);
         setLogement(jsonData.find((element) => element.id === id));
-        console.log("le logement");
-        console.log(logement);
       })
 
       .catch((error) => {
@@ -55,7 +52,7 @@ function Logement() {
     }
 
     return (
-      <div>
+      <div className="logement">
         <div className="caroussel">
           <img
             className="left"

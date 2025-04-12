@@ -8,10 +8,8 @@ function Gallery() {
       .then((response) => response.json())
       .then((jsonData) => {
         setData(jsonData);
-        console.log("le JSON ici:");
-        console.log(jsonData);
       })
- 
+
       .catch((error) => {
         console.error(
           "Erreur lors de la récupération du fichier JSON :",
