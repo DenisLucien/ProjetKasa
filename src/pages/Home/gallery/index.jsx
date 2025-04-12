@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import './gallery.scss'
-function Gallery(){
-    const [data, setData] = useState(null);
+import "./gallery.scss";
+function Gallery() {
+  const [data, setData] = useState(null);
   useEffect(() => {
     // Utilisez fetch pour récupérer le fichier JSON
     fetch("/logements.json")
@@ -11,7 +11,7 @@ function Gallery(){
         console.log("le JSON ici:");
         console.log(jsonData);
       })
-
+ 
       .catch((error) => {
         console.error(
           "Erreur lors de la récupération du fichier JSON :",
@@ -19,11 +19,13 @@ function Gallery(){
         );
       });
   }, []);
-    return<div>
-        {data ? (
+
+  return (
+    <div>
+      {data ? (
         <div className="CardGallery">
           {data.map((item, index) => (
-            <a href= {`/logement/${item.id}`} key={index} className="Card">
+            <a href={`/logement/${item.id}`} key={index} className="Card">
               <h3>{item.title}</h3>
               <img src={item.cover} alt=""></img>
             </a>
@@ -33,7 +35,7 @@ function Gallery(){
         <p className="loading">Chargement...</p>
       )}
     </div>
-    
+  );
 }
 
-export default Gallery
+export default Gallery;

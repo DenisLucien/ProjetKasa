@@ -9,8 +9,6 @@ function UnderPicture(objetlogement) {
   const logement = objetlogement.logement;
   const rating = logement.rating;
   const tags = logement.tags;
-  console.log("logement2");
-  console.log(objetlogement.logement);
   if (logement) {
     return (
       <div className="allUnderPicture">

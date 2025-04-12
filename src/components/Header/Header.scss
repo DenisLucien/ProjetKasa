@@ -44,7 +44,7 @@
     }
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 530px) {
   .header {
     img {
       width: 30%;
@@ -52,6 +52,21 @@
     nav {
       a {
         font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    gap: 50px;
+    align-self: center
+    img {
+      width: 30%;
+    }
+    nav {
+      a {
+        font-size: 12px;
       }
     }
   }
