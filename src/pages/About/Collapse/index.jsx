@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./collapse.scss";
 import arrowUp from "../../../assets/arrowUp.png";
-import CollapseElement from "../../../components/CollapseElement/index";
-import { toggleSection } from "../../../components/CollapseElement/index";
+import CollapseElement from "../../../components/CollapseEle/index";
+import { toggleSection } from "../../../components/CollapseEle/index";
 
 function Collapse() {
   const [openSections, setOpenSections] = useState({

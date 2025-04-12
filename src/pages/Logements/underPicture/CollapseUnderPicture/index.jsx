@@ -2,8 +2,8 @@
 import "./CollapseUnderPicture.scss";
 import arrowUp from "../../../../assets/arrowUp.png";
 import { useState } from "react";
-import CollapseElement from "../../../../components/CollapseElement";
-import { toggleSection } from "../../../../components/CollapseElement/index.jsx";
+import CollapseElement from "../../../../components/CollapseEle/index.jsx";
+import { toggleSection } from "../../../../components/CollapseEle/index.jsx";
 function CollapseUnderPicture(objetlogement) {
   const logement = objetlogement.logement;
   const [openSections, setOpenSections] = useState({

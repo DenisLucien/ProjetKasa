@@ -1,17 +1,16 @@
 .dropMenu {
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:30px;
+  gap: 30px;
   .CollapseElement {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
 }
 
@@ -25,7 +24,7 @@
 
 .elementTitle {
   cursor: pointer;
-  height:52px;
+  height: 52px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,11 +45,4 @@
 }
 
 @media (max-width: 720px) {
-  .dropMenu{
-    .CollapseElement{
-      .elementTitle{
-        width:95%;
-      }
-    }
-  }
 }
